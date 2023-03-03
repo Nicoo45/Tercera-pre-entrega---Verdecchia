@@ -3,13 +3,12 @@ from django.db import models
 # Create your models here.
 
 class Clubs(models.Model):
-    nombre = models.CharField(max_length=50)
-    sede = models.CharField(max_length=50)
-    numero_club = models.IntegerField()
-
+    nombre = models.CharField(max_length=50, null=True, blank=True)
+    sede = models.CharField(max_length=50, null=True, blank=True)
+    
     def __str__(self):
         return self.nombre
-    
+
 class Entrenadores(models.Model):
     nombre = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30)
@@ -24,7 +23,7 @@ class Deportistas(models.Model):
     apellido = models.CharField(max_length=30)
     email = models.EmailField()
     posicion = models.CharField(max_length=30)
-    fecha_ingreso = models.DateField()
+    fechaingreso = models.DateField()
 
     def __str__(self):
         return self.nombre
