@@ -20,15 +20,14 @@ def inicio(request):
 
 #def equipamiento(request):
 #    return render(request, "allclubs/equipamiento.html")
-"""
-def clubsFormulario(request):
-     return render(request, "allclubs/clubsFormulario.html")
+
+def buscar_clubs(request):
+    return render(request, "inicio.html")
 
 def buscar(request):
-    if request.GET["clubs"]:
+    if request.GET["club"]:
 
-        #mensaje = "Club buscado: %r" %request.GET["clubs"]
-        clubes=request.GET["clubs"]
+        clubes=request.GET["club"]
         clubs =Clubs.objects.filter(nombre__icontains=clubes)
 
         return render(request, "allclubs/resultados_busqueda.html", {"clubs": clubs, "query":clubes})
@@ -38,7 +37,7 @@ def buscar(request):
         mensaje= "No has introducido nada"
 
     return HttpResponse(mensaje)
-"""
+
 def clubs(request):
     if request.method== "POST":
 

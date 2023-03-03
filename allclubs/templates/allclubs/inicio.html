@@ -1,12 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
 {% extends "allclubs/padre.html" %}
 {% load static %}
 {% block contenidoQueCambia %}
-
-  <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
   <h1>-----Inicio-----</h1>
-
-  <p></p>
   
   <h3>WEB ADMINISTRACIÓN DE CLUBES</h3>
+
+    <form action="/buscar/" method="GET">
+
+        <input type="text" name="club">
+
+        <input type="submit" value="Buscar">
+        
+    </form>
 
 {% endblock %}

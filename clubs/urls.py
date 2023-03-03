@@ -20,6 +20,6 @@ from allclubs import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('allclubs/', include('allclubs.urls')),
-    path('clubs/', views.clubs),
-    #path('buscar/', views.buscar),
+    path('buscar_clubs', views.buscar_clubs),
+    path('buscar/', views.buscar),
 ]

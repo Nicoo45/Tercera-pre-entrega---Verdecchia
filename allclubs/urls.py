@@ -7,6 +7,6 @@ urlpatterns = [
     path('entrenadores', views.entrenadores, name="entrenadores"),
     path('deportistas', views.deportistas, name="deportistas"),
     path('equipamiento', views.equipamiento, name="equipamiento"),
-    #path('ClubsFormulario', views.ClubsFormulario, name="ClubsFormulario"),
-    #path('EntrenadoresFormulario', views.EntrenadoresFormulario, name="EntrenadoresFormulario"),    
+    #path('buscar_clubs', views.buscar_clubs),
+    #path('buscar/', views.buscar),
 ]
